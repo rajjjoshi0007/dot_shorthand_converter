@@ -1,8 +1,7 @@
 name: dot_shorthand_helper
 description: "A helper package/CLI that automatically refactors common Flutter enum usages (e.g., MainAxisAlignment.start) into the new Dart/Flutter 3.38 dot-shorthand form (.start)."
 version: 0.0.1
-homepage: # TODO: Add your package homepage URL (e.g., GitHub repository)
-repository: # TODO: Add your repository URL (e.g., https://github.com/username/dot_sh_helper)
+repository: https://github.com/rajjjoshi0007/dot_shorthand_converter
 
 environment:
   sdk: ^3.9.2
