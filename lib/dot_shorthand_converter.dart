@@ -119,19 +119,6 @@ const Set<String> dotShorthandEnums = {
   'WidgetState',
 };
 
-/// Converts known enum usages like `MainAxisAlignment.start` into `.start`.
-///
-/// This function operates purely on text and does **not** perform full
-/// type analysis, so it may occasionally be too aggressive if you use
-/// the same enum names in unusual contexts. In typical Flutter widget
-/// trees it should be safe.
-///
-/// Example:
-/// ```dart
-/// final before = 'mainAxisAlignment: MainAxisAlignment.start,';
-/// final after = convertToDotShorthand(before);
-/// // after: 'mainAxisAlignment: .start,'
-/// ```
 String convertToDotShorthand(String source, {Set<String>? enumTypes}) {
   final enums = enumTypes ?? dotShorthandEnums;
   if (enums.isEmpty) return source;
