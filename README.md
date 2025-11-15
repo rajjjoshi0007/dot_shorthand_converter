@@ -1,8 +1,5 @@
 # dot_shorthand_helper
 
-[![pub package](https://img.shields.io/pub/v/dot_shorthand_helper.svg)](https://pub.dev/packages/dot_shorthand_helper)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 A helper package/CLI that automatically refactors common Flutter enum usages into the new Dart/Flutter 3.38+ dot-shorthand form.
 
 ## Overview
