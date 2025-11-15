@@ -119,6 +119,25 @@ const Set<String> dotShorthandEnums = {
   'WidgetState',
 };
 
+/// Converts the given source code to the dot-shorthand form.
+///
+/// This function transforms enum usages like `MainAxisAlignment.start` into
+/// the dot-shorthand form `.start` for all enum types specified in [enumTypes].
+///
+/// Example:
+/// ```dart
+/// final code = 'mainAxisAlignment: MainAxisAlignment.start;';
+/// final converted = convertToDotShorthand(code);
+/// // Result: 'mainAxisAlignment: .start;'
+/// ```
+///
+/// Parameters:
+/// - [source] - The source code to convert.
+/// - [enumTypes] - The set of enum types to convert. If not provided,
+/// the default set of enum types from [dotShorthandEnums] will be used.
+///
+/// Returns the converted source code with enum usages replaced by their
+/// dot-shorthand equivalents.
 String convertToDotShorthand(String source, {Set<String>? enumTypes}) {
   final enums = enumTypes ?? dotShorthandEnums;
   if (enums.isEmpty) return source;

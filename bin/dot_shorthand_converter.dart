@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import '../lib/dot_shorthand_converter.dart';
+import 'package:dot_shorthand_converter/dot_shorthand_converter.dart';
 
 /// Simple CLI that walks a file or directory and converts known enum
 /// usages like `MainAxisAlignment.start` into `.start`.
 ///
 /// Usage:
-///   dart run dot_shorthand_converter <path-to-file-or-directory>
+///   dart run dot_shorthand_converter [path-to-file-or-directory]
 ///
 /// Example:
 ///   dart run dot_shorthand_converter lib/
