@@ -1,15 +1,15 @@
 import 'dart:io';
 
-import '../lib/dot_shorthand_helper.dart';
+import '../lib/dot_shorthand_converter.dart';
 
 /// Simple CLI that walks a file or directory and converts known enum
 /// usages like `MainAxisAlignment.start` into `.start`.
 ///
 /// Usage:
-///   dart run dot_shorthand_helper <path-to-file-or-directory>
+///   dart run dot_shorthand_converter <path-to-file-or-directory>
 ///
 /// Example:
-///   dart run dot_shorthand_helper lib/
+///   dart run dot_shorthand_converter lib/
 Future<void> main(List<String> args) async {
   final targetPath = args.isNotEmpty ? args.first : Directory.current.path;
 
@@ -43,7 +43,7 @@ Future<void> main(List<String> args) async {
   }
 
   stdout.writeln(
-    'dot_shorthand_helper: processing ${files.length} Dart file(s)...',
+    'dot_shorthand_converter: processing ${files.length} Dart file(s)...',
   );
 
   var changedCount = 0;

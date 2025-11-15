@@ -1,10 +1,10 @@
-# dot_shorthand_helper
+# dot_shorthand_converter
 
 A helper package/CLI that automatically refactors common Flutter enum usages into the new Dart/Flutter 3.38+ dot-shorthand form.
 
 ## Overview
 
-**dot_shorthand_helper** converts verbose enum usages like:
+**dot_shorthand_converter** converts verbose enum usages like:
 
 ```dart
 Column(
@@ -36,11 +36,11 @@ This package works as a simple string-based codemod over your Dart files, making
 
 ## Installation
 
-Add `dot_shorthand_helper` to your `dev_dependencies` in `pubspec.yaml`:
+Add `dot_shorthand_converter` to your `dev_dependencies` in `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  dot_shorthand_helper: ^0.0.1
+  dot_shorthand_converter: ^0.0.1
 ```
 
 Then install it:
@@ -54,7 +54,7 @@ dart pub get
 Run the CLI from the root of your Flutter app/package:
 
 ```bash
-dart run dot_shorthand_helper lib/
+dart run dot_shorthand_converter lib/
 ```
 
 This will walk all `.dart` files under `lib/` and rewrite common enum usages to use dot-shorthand.
@@ -64,13 +64,13 @@ This will walk all `.dart` files under `lib/` and rewrite common enum usages to 
 ### Refactor a directory
 
 ```bash
-dart run dot_shorthand_helper lib/
+dart run dot_shorthand_converter lib/
 ```
 
 ### Refactor a single file
 
 ```bash
-dart run dot_shorthand_helper lib/my_widget.dart
+dart run dot_shorthand_converter lib/my_widget.dart
 ```
 
 ### Refactor current directory
@@ -78,7 +78,7 @@ dart run dot_shorthand_helper lib/my_widget.dart
 If you omit the path, it defaults to the current working directory:
 
 ```bash
-dart run dot_shorthand_helper
+dart run dot_shorthand_converter
 ```
 
 ## Library Usage
@@ -86,7 +86,7 @@ dart run dot_shorthand_helper
 You can also use the core transformer directly in Dart code:
 
 ```dart
-import 'package:dot_shorthand_helper/dot_shorthand_helper.dart';
+import 'package:dot_shorthand_converter/dot_shorthand_converter.dart';
 
 void main() {
   const before = 'mainAxisAlignment: MainAxisAlignment.start,';
@@ -122,7 +122,7 @@ The package includes support for 100+ common Flutter enums, including:
 - **Scrolling**: `ScrollDirection`, `ScrollViewKeyboardDismissBehavior`, etc.
 - **And many more...**
 
-See [`lib/dot_shorthand_helper.dart`](lib/dot_shorthand_helper.dart) for the complete list.
+See [`lib/dot_shorthand_converter.dart`](lib/dot_shorthand_converter.dart) for the complete list.
 
 ## Requirements
 
