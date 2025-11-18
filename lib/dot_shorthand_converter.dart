@@ -114,9 +114,6 @@ const Set<String> dotShorthandEnums = {
 
   // Theme & Styling
   'Brightness',
-
-  // Widget States
-  'WidgetState',
 };
 
 /// Converts the given source code to the dot-shorthand form.

@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Bug fix
+
 ## 0.0.3
 
 * Improved documentation and added example.
